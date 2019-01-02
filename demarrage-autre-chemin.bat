@@ -1,0 +1,1 @@
+npm start --prefix MON-APP-ELECTRON
