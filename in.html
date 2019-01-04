@@ -10,8 +10,7 @@
 
     <!-- normal script imports etc  -->
     <script src="js/jquery-3.3.1.min.js"></script>  
-
-    <script src='js/main.js'></script>    
+   
     <script src='js/sql.js'></script>
 
 
@@ -86,15 +85,14 @@
             }
 
 
-
-     $("#ecris").click( function() 
+    $("#ecris").click( function() 
         {          
 
              var fs =  require('fs');         
              var sql = require("./js/sql.js");      
              var filebuffer = fs.readFileSync("bd/mybd.sqlite"); 
              var db = new sql.Database(filebuffer);
-              db.run("INSERT INTO test (col1, col2) VALUES ('gerald','coucou')");
+              db.run("INSERT INTO test (col1, col2) VALUES ('dedez','zdeezd')");
              var data = db.export();
              var buffer = new Buffer(data);
              fs.writeFileSync("bd/mybd.sqlite", buffer );
